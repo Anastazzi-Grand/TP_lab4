@@ -1,0 +1,32 @@
+﻿@model IEnumerable<TP_Controller.Models.Client>
+@{
+    //ViewData["Title"] = "Список заказов";
+    Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Список заказов</title>
+</head>
+<body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Заказ</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        @foreach (var client in Model)
+            {
+            <tr>
+                <td>@client.Name</td>
+                <td>@client.Zakaz</td>
+                <td>@client.Price</td>
+                <td><a href="~/Home/Buy/@client.Id">Купить</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
