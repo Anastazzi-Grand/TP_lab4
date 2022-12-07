@@ -2,12 +2,12 @@
 
 namespace TP_Controller.Models
 {
-    public class ZakazContext : DbContext
+    public class OrderContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Order> Orders { get; set; }
 
-        public ZakazContext(DbContextOptions<ZakazContext> options)
+        public OrderContext(DbContextOptions<OrderContext> options)
             : base(options)
         {
             Database.EnsureCreated();

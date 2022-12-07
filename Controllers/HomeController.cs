@@ -6,8 +6,8 @@ namespace TP_Controller.Controllers
 {
     public class HomeController : Controller
     {
-        ZakazContext db;
-        public HomeController(ZakazContext context)
+        OrderContext db;
+        public HomeController(OrderContext context)
         {
             db = context;
         }

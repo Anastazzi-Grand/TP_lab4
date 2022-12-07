@@ -13,17 +13,17 @@
     <h3>Смартфоны</h3>
     <table>
         <tr>
-            <td>Название</td>
-            <td>Заказ</td>
-            <td>Цена</td>
+            <td>Full name</td>
+            <td>Adress</td>
+            <td>Telephone</td>
             <td></td>
         </tr>
         @foreach (var client in Model)
             {
             <tr>
-                <td>@client.Name</td>
-                <td>@client.Zakaz</td>
-                <td>@client.Price</td>
+                <td>@client.Full_Name</td>
+                <td>@client.Adress</td>
+                <td>@client.Telephone</td>
                 <td><a href="~/Home/Buy/@client.Id">Купить</a></td>
             </tr>
         }

@@ -4,28 +4,28 @@ namespace TP_Controller
 {
     public class SampleData
     {
-        public static void Initialize(ZakazContext context)
+        public static void Initialize(OrderContext context)
         {
             if (!context.Clients.Any())
             {
                 context.Clients.AddRange(
                     new Client
                     {
-                        Name = "Pizza",
-                        Zakaz = "One big pizza",
-                        Price = 600
+                        Full_Name = "Ivanov Stepan",
+                        Adress = "Ryazan, Pushkina street, 46",
+                        Telephone = "89663984330"
                     },
                     new Client
                     {
-                        Name = "Burger",
-                        Zakaz = "Two burgers",
-                        Price = 400
+                        Full_Name = "Petrov Ivan",
+                        Adress = "Ryazan, Visokovoltnaya street, 55",
+                        Telephone = "89035654560"
                     },
                     new Client
                     {
-                        Name = "Coca-Cola",
-                        Zakaz = "One liter of Coca-Cola",
-                        Price = 300
+                        Full_Name = "Bulatov Mikhail",
+                        Adress = "Ryazan, Pushkina street, 42",
+                        Telephone = "89654561235"
                     }
                 );
                 context.SaveChanges();

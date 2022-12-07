@@ -19,7 +19,7 @@ namespace TP_Controller
 
                 try
                 {
-                    var context = services.GetRequiredService<ZakazContext>();
+                    var context = services.GetRequiredService<OrderContext>();
                     SampleData.Initialize(context);
                 }
                 catch (Exception ex)
