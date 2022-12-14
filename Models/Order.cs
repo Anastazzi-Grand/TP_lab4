@@ -2,9 +2,9 @@
 {
     public class Order
     {
-        public int OrderId { get; set; }
-        public string Order_date { get; set; } 
-        public string Status { get; set; } 
+        public int Id { get; set; }
+        public string Date_of_order { get; set; } 
+        public string Status_of_order { get; set; } 
         public string Date_of_excution { get; set; }
         public int Payment { get; set; }
 
