@@ -9,7 +9,7 @@ namespace TP_Controller.Controllers
         public Order Create(Order order)
         {
             Storage.OrderStorage.Create(order);
-            return Storage.OrderStorage.Read(order.OrderId);
+            return Storage.OrderStorage.Read(order.Id);
         }
 
         [HttpGet]

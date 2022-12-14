@@ -10,7 +10,7 @@ namespace TP_Controller.Repository
 
         public Order Create(Order order)
         {
-            Orders.Add(order.OrderId, order);
+            Orders.Add(order.Id, order);
             return order;
             //var command = Connection.CreateCommand();
             //command.CommandText = "SELECT * FROM .....";

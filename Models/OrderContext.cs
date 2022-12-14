@@ -4,8 +4,8 @@ namespace TP_Controller.Models
 {
     public class OrderContext : DbContext
     {
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Client> Clients { get; set; } = null!;
+        public DbSet<Order> Orders { get; set; } = null!;
 
         public OrderContext(DbContextOptions<OrderContext> options)
             : base(options)

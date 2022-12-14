@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-//using Microsoft.Identity.Client.Extensions.Msal;
 using TP_Controller.Models;
 using System;
 using System.Collections.Generic;
@@ -11,8 +10,15 @@ using Microsoft.Extensions.Logging;
 
 namespace TP_Controller.Controllers
 {
-    public class ClientController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ClientController : ControllerBase
     {
+        OrderContext db;
+        public ClientController(OrderContext context)
+        {
+            db = context;
+        }
         [HttpPut]
         public Client Create(Client client)
         {
